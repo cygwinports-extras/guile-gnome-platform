@@ -1,0 +1,5 @@
+category: Scheme Gnome
+sdesc: "Guile GNOME library bindings (documentation)"
+ldesc: "guile-gnome is a Guile wrapper collection for the GNOME library 
+stack. It ships with an wrapper engine that allows semi-automatic 
+wrapping of GObject-based C APIs."

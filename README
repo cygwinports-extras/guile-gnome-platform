@@ -1,0 +1,316 @@
+guile-gnome0
+------------------------------------------
+guile-gnome is a Guile wrapper collection for the GNOME library stack.
+It ships with an wrapper engine that allows semi-automatic wrapping of
+GObject-based C APIs.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  GConf2-2.18.0.1-1
+  ORBit2-2.14.9-1
+  atk-1.18.0-1
+  g-wrap-1.9.9-1
+  gdk-pixbuf2-2.10.14-1
+  glib2-2.12.13-1
+  gnome-vfs2-2.18.1-1
+  gtk2-x11-2.10.14-1
+  guile-cairo-1.4.0-1
+  libbonobo2-2.18.0-1
+  libcairo2-1.4.10-1
+  libglade2-2.6.1-1
+  libgnome2-2.18.0-1
+  libgnomecanvas2-2.14.0-1
+  libgnomeui2-2.18.1-1
+  libguile17-1.8.2-1
+  pango-1.16.5-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.10-1.10-1
+  binutils-20060817-1
+  cygport-0.3.6-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.gnu.org/software/guile-gnome/
+
+Canonical download:
+  http://ftp.gnu.org/pub/gnu/guile-gnome/guile-gnome-platform/
+
+-------------------------------------------
+
+Build instructions:
+  unpack guile-gnome0-2.15.95-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./guile-gnome0-2.15.95-X.cygport all
+
+This will create:
+  /usr/src/guile-gnome0-2.15.95-X-src.tar.bz2
+  /usr/src/guile-gnome0-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-atk-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-cairo-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-canvas-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-corba-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-gconf-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-glade-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-gnome-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-gnome-ui-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-gobject-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-gtk-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-pango-2.15.95-X.tar.bz2
+  /usr/src/guile-gnome0-vfs-2.15.95-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(guile-gnome0)
+  /etc/postinstall/guile-gnome0.sh
+  /usr/share/doc/Cygwin/guile-gnome0-2.15.95.README
+  /usr/share/doc/guile-gnome0-2.15.95/AUTHORS
+  /usr/share/doc/guile-gnome0-2.15.95/COPYING
+  /usr/share/doc/guile-gnome0-2.15.95/ChangeLog
+  /usr/share/doc/guile-gnome0-2.15.95/HACKING
+  /usr/share/doc/guile-gnome0-2.15.95/INSTALL
+  /usr/share/doc/guile-gnome0-2.15.95/NEWS
+  /usr/share/doc/guile-gnome0-2.15.95/README
+  /usr/share/info/guile-gnome-atk.info.gz
+  /usr/share/info/guile-gnome-gdk.info-1.gz
+  /usr/share/info/guile-gnome-gdk.info-2.gz
+  /usr/share/info/guile-gnome-gdk.info.gz
+  /usr/share/info/guile-gnome-glib.info.gz
+  /usr/share/info/guile-gnome-gtk.info-1.gz
+  /usr/share/info/guile-gnome-gtk.info-2.gz
+  /usr/share/info/guile-gnome-gtk.info-3.gz
+  /usr/share/info/guile-gnome-gtk.info-4.gz
+  /usr/share/info/guile-gnome-gtk.info-5.gz
+  /usr/share/info/guile-gnome-gtk.info.gz
+  /usr/share/info/guile-gnome-pango.info.gz
+  /usr/share/info/guile-gnome-pangocairo.info.gz
+  /usr/share/info/guile-gnome-tutorial.info.gz
+
+(guile-gnome0-gobject)
+  /usr/bin/guile-gnome-0
+  /usr/bin/cygguile-gnome-gobject-0-0.dll
+  /usr/include/guile-gnome-0/guile-gnome-gobject.h
+  /usr/include/guile-gnome-0/guile-gnome-gobject/gc.h
+  /usr/include/guile-gnome-0/guile-gnome-gobject/gclosure.h
+  /usr/include/guile-gnome-0/guile-gnome-gobject/gobject.h
+  /usr/include/guile-gnome-0/guile-gnome-gobject/gparameter.h
+  /usr/include/guile-gnome-0/guile-gnome-gobject/gsignal.h
+  /usr/include/guile-gnome-0/guile-gnome-gobject/gtype.h
+  /usr/include/guile-gnome-0/guile-gnome-gobject/gutil.h
+  /usr/include/guile-gnome-0/guile-gnome-gobject/gvalue.h
+  /usr/lib/libguile-gnome-gobject-0.dll.a
+  /usr/lib/libguile-gnome-gobject-0.la
+  /usr/lib/pkgconfig/guile-gnome-defs-0.pc
+  /usr/lib/pkgconfig/guile-gnome-glib-0.pc
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-glib.dll
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-gobject.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-glib.la
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-gobject.la
+  /usr/share/guile-gnome-0/gnome/defs/common-ignores.defs
+  /usr/share/guile-gnome-0/gnome/defs/glib-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/glib.defs
+  /usr/share/guile-gnome-0/gnome/glib.scm
+  /usr/share/guile-gnome-0/gnome/gobject.scm
+  /usr/share/guile-gnome-0/gnome/gobject/config.scm
+  /usr/share/guile-gnome-0/gnome/gobject/defs-support.scm
+  /usr/share/guile-gnome-0/gnome/gobject/event-repl.scm
+  /usr/share/guile-gnome-0/gnome/gobject/gclosure.scm
+  /usr/share/guile-gnome-0/gnome/gobject/generics.scm
+  /usr/share/guile-gnome-0/gnome/gobject/gobject.scm
+  /usr/share/guile-gnome-0/gnome/gobject/gparameter.scm
+  /usr/share/guile-gnome-0/gnome/gobject/gsignal.scm
+  /usr/share/guile-gnome-0/gnome/gobject/gtype.scm
+  /usr/share/guile-gnome-0/gnome/gobject/gvalue.scm
+  /usr/share/guile-gnome-0/gnome/gobject/gw-spec-utils.scm
+  /usr/share/guile-gnome-0/gnome/gobject/gw-utils.scm
+  /usr/share/guile-gnome-0/gnome/gobject/utils.scm
+  /usr/share/guile-gnome-0/gnome/gw/generics.scm
+  /usr/share/guile-gnome-0/gnome/gw/glib.scm
+  /usr/share/guile-gnome-0/gnome/gw/glib-spec.scm
+  /usr/share/guile-gnome-0/gnome/gw/gobject.scm
+  /usr/share/guile-gnome-0/gnome/gw/gobject-spec.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/defs.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/g-wrap.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/genwrite.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/glob.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/gobject.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/gtk-doc.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/modules.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/printf.scm
+  /usr/share/guile-gnome-0/gnome/gw/support/slib.scm
+  /usr/share/guile-gnome-0/gnome/overrides/glib.defs
+  /usr/share/guile-gnome-0/gnome/overrides/glib.defs-type-ignores
+  /usr/share/guile/site/gnome-0.scm
+
+(guile-gnome0-atk)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-atk.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-atk.la
+  /usr/share/guile-gnome-0/gnome/defs/atk-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/atk.defs
+  /usr/share/guile-gnome-0/gnome/atk.scm
+  /usr/share/guile-gnome-0/gnome/gw/atk.scm
+  /usr/share/guile-gnome-0/gnome/gw/atk-spec.scm
+  /usr/share/guile-gnome-0/gnome/overrides/atk.defs
+
+(guile-gnome0-cairo)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-cairo.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-cairo.la
+  /usr/share/guile-gnome-0/gnome/cairo.scm
+  /usr/share/guile-gnome-0/gnome/gw/cairo.scm
+  /usr/share/guile-gnome-0/gnome/gw/cairo-spec.scm
+
+(guile-gnome0-canvas)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-canvas.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-canvas.la
+  /usr/share/guile-gnome-0/gnome/defs/libgnomecanvas-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/libgnomecanvas.defs
+  /usr/share/guile-gnome-0/gnome/canvas.scm
+  /usr/share/guile-gnome-0/gnome/gw/canvas.scm
+  /usr/share/guile-gnome-0/gnome/gw/canvas-spec.scm
+  /usr/share/guile-gnome-0/gnome/overrides/libgnomecanvas.defs
+
+(guile-gnome0-corba)
+  /usr/bin/cygguile-gnome-corba-0-0.dll
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-corba.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-corba.la
+  /usr/include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-generic.h
+  /usr/include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-primitives.h
+  /usr/include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-types.h
+  /usr/include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba.h
+  /usr/lib/libguile-gnome-corba-0.dll.a
+  /usr/lib/libguile-gnome-corba-0.la
+  /usr/lib/orbit-2.0/Foo_module.dll
+  /usr/lib/orbit-2.0/Foo_module.la
+  /usr/share/guile-gnome-0/gnome/corba.scm
+  /usr/share/guile-gnome-0/gnome/corba/primitives.scm
+  /usr/share/guile-gnome-0/gnome/corba/types.scm
+  /usr/share/guile-gnome-0/gnome/gw/corba.scm
+  /usr/share/guile-gnome-0/gnome/gw/corba-spec.scm
+
+(guile-gnome0-gconf)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-gconf.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-gconf.la
+  /usr/share/guile-gnome-0/gnome/defs/gconf-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/gconf.defs
+  /usr/share/guile-gnome-0/gnome/gconf.scm
+  /usr/share/guile-gnome-0/gnome/gw/gconf.scm
+  /usr/share/guile-gnome-0/gnome/gw/gconf-spec.scm
+  /usr/share/guile-gnome-0/gnome/overrides/gconf.defs
+  /usr/share/guile-gnome-0/gnome/overrides/gconf.defs-type-ignores
+
+(guile-gnome0-glade)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-libglade.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-libglade.la
+  /usr/share/guile-gnome-0/gnome/defs/libglade-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/libglade.defs
+  /usr/share/guile-gnome-0/gnome/glade.scm
+  /usr/share/guile-gnome-0/gnome/gw/libglade.scm
+  /usr/share/guile-gnome-0/gnome/gw/libglade-spec.scm
+  /usr/share/guile-gnome-0/gnome/overrides/libglade.defs
+
+(guile-gnome0-gnome)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-libgnome.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-libgnome.la
+  /usr/share/guile-gnome-0/gnome/defs/libgnome-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/libgnome.defs
+  /usr/share/guile-gnome-0/gnome/gnome.scm
+  /usr/share/guile-gnome-0/gnome/gw/libgnome.scm
+  /usr/share/guile-gnome-0/gnome/gw/libgnome-spec.scm
+  /usr/share/guile-gnome-0/gnome/overrides/libgnome.defs
+
+(guile-gnome0-gnome-ui)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-libgnomeui.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-libgnomeui.la
+  /usr/lib/pkgconfig/guile-gnome-libgnomeui-0.pc
+  /usr/share/guile-gnome-0/gnome/defs/libgnomeui-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/libgnomeui.defs
+  /usr/share/guile-gnome-0/gnome/gnome-ui.scm
+  /usr/share/guile-gnome-0/gnome/gw/libgnomeui.scm
+  /usr/share/guile-gnome-0/gnome/gw/libgnomeui-spec.scm
+  /usr/share/guile-gnome-0/gnome/overrides/libgnomeui.defs
+  /usr/share/guile-gnome-0/gnome/overrides/libgnomeui.defs-type-ignores
+
+(guile-gnome0-gtk)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-gdk.dll
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-gtk.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-gdk.la
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-gtk.la
+  /usr/lib/pkgconfig/guile-gnome-gtk-0.pc
+  /usr/share/guile-gnome-0/gnome/contrib/delay-tree-model.scm
+  /usr/share/guile-gnome-0/gnome/contrib/filtered-list.scm
+  /usr/share/guile-gnome-0/gnome/contrib/help-browser.scm
+  /usr/share/guile-gnome-0/gnome/contrib/texinfo-buffer.scm
+  /usr/share/guile-gnome-0/gnome/defs/gdk-pixbuf-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/gdk-pixbuf.defs
+  /usr/share/guile-gnome-0/gnome/defs/gdk-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/gdk.defs
+  /usr/share/guile-gnome-0/gnome/defs/gtk-extrafuncs.defs
+  /usr/share/guile-gnome-0/gnome/defs/gtk-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/gtk.defs
+  /usr/share/guile-gnome-0/gnome/gtk.scm
+  /usr/share/guile-gnome-0/gnome/gtk/gdk-event.scm
+  /usr/share/guile-gnome-0/gnome/gtk/graphical-repl.scm
+  /usr/share/guile-gnome-0/gnome/gw/gdk.scm
+  /usr/share/guile-gnome-0/gnome/gw/gdk-spec.scm
+  /usr/share/guile-gnome-0/gnome/gw/gtk.scm
+  /usr/share/guile-gnome-0/gnome/gw/gtk-spec.scm
+  /usr/share/guile-gnome-0/gnome/overrides/gdk-pixbuf.defs
+  /usr/share/guile-gnome-0/gnome/overrides/gdk.defs
+  /usr/share/guile-gnome-0/gnome/overrides/gdk.defs-type-ignores
+  /usr/share/guile-gnome-0/gnome/overrides/gtk-customs.defs
+  /usr/share/guile-gnome-0/gnome/overrides/gtk.defs
+  /usr/share/guile-gnome-0/gnome/overrides/gtk.defs-type-ignores
+
+(guile-gnome0-pango)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-pango.dll
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-pangocairo.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-pango.la
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-pangocairo.la
+  /usr/share/guile-gnome-0/gnome/defs/pango-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/pango.defs
+  /usr/share/guile-gnome-0/gnome/defs/pangocairo-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/pangocairo.defs
+  /usr/share/guile-gnome-0/gnome/gw/pango.scm
+  /usr/share/guile-gnome-0/gnome/gw/pango-spec.scm
+  /usr/share/guile-gnome-0/gnome/gw/pangocairo.scm
+  /usr/share/guile-gnome-0/gnome/gw/pangocairo-spec.scm
+  /usr/share/guile-gnome-0/gnome/pango.scm
+  /usr/share/guile-gnome-0/gnome/overrides/pango.defs
+  /usr/share/guile-gnome-0/gnome/overrides/pangocairo.defs
+
+(guile-gnome0-vfs)
+  /usr/lib/guile-gnome-0/cyggw-guile-gnome-gnome-vfs.dll
+  /usr/lib/guile-gnome-0/libgw-guile-gnome-gnome-vfs.la
+  /usr/share/guile-gnome-0/gnome/defs/gnome-vfs-types.defs
+  /usr/share/guile-gnome-0/gnome/defs/gnome-vfs.defs
+  /usr/share/guile-gnome-0/gnome/gw/gnome-vfs.scm
+  /usr/share/guile-gnome-0/gnome/gw/gnome-vfs-spec.scm
+  /usr/share/guile-gnome-0/gnome/overrides/gnome-vfs.defs
+  /usr/share/guile-gnome-0/gnome/overrides/gnome-vfs.defs-type-ignores
+  /usr/share/guile-gnome-0/gnome/vfs.scm
+
+------------------
+
+Port Notes:
+
+----- version 2.15.95-1 -----
+Version bump.
+
+----- version 2.15.94-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

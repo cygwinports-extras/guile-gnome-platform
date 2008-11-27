@@ -1,0 +1,12 @@
+usr/lib/guile-gnome-*/*gw-guile-gnome-gdk.*
+usr/lib/guile-gnome-*/*gw-guile-gnome-gtk.*
+usr/lib/pkgconfig/guile-gnome-gtk-*
+usr/share/guile-gnome-*/gnome/contrib/
+usr/share/guile-gnome-*/gnome/defs/gdk*
+usr/share/guile-gnome-*/gnome/defs/gtk-*
+usr/share/guile-gnome-*/gnome/defs/gtk.*
+usr/share/guile-gnome-*/gnome/gtk*
+usr/share/guile-gnome-*/gnome/gw/gdk*
+usr/share/guile-gnome-*/gnome/gw/gtk*
+usr/share/guile-gnome-*/gnome/overrides/gdk*
+usr/share/guile-gnome-*/gnome/overrides/gtk*

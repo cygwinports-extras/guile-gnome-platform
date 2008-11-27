@@ -1,0 +1,5 @@
+usr/lib/guile-gnome-*/*gw-guile-gnome-pango*
+usr/share/guile-gnome-*/gnome/defs/pango*
+usr/share/guile-gnome-*/gnome/gw/pango*
+usr/share/guile-gnome-*/gnome/pango.scm
+usr/share/guile-gnome-*/gnome/overrides/pango*

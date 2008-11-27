@@ -1,0 +1,5 @@
+usr/lib/guile-gnome-*/*gw-guile-gnome-canvas.*
+usr/share/guile-gnome-0/gnome/defs/libgnomecanvas*
+usr/share/guile-gnome-0/gnome/canvas.scm
+usr/share/guile-gnome-0/gnome/gw/canvas*
+usr/share/guile-gnome-0/gnome/overrides/libgnomecanvas*

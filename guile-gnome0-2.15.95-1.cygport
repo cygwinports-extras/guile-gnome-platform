@@ -1,0 +1,60 @@
+ORIG_PN="guile-gnome-platform"
+
+DESCRIPTION="Guile bindings for the GNOME libraries"
+HOMEPAGE="http://home.gna.org/guile-gnome/"
+SRC_URI="mirror://gnu/guile-gnome/${ORIG_PN}/${ORIG_PN}-${PV}.tar.gz"
+
+abi=0
+pkglibdir="usr/lib/guile-gnome-${abi}"
+pkgdatadir="usr/share/guile-gnome-${abi}/gnome"
+
+PKG_NAMES="${PN} ${PN}-gobject ${PN}-gtk ${PN}-cairo ${PN}-canvas ${PN}-corba ${PN}-pango"
+PKG_HINTS="setup gobject gtk cairo canvas corba pango"
+PKG_LISTS="NULL  gobject gtk cairo canvas corba pango"
+PKG_CONTENTS[0]='etc/ usr/share/doc/ usr/share/info/'
+
+n=7
+for b in atk gconf glade gnome gnome-ui vfs
+do
+	case ${b} in
+		vfs)	m=gnome-vfs ;;
+		glade|gnome|gnome-ui)	m=lib${b/-} ;;
+		*)			m=${b} ;;
+	esac
+
+	PKG_NAMES+=" ${PN}-${b}"
+	PKG_HINTS+=" ${b}"
+	PKG_CONTENTS[${n}]="
+		${pkglibdir}/*gw-guile-gnome-${m}.*
+		${pkgdatadir}/defs/${m}-types.defs
+		${pkgdatadir}/defs/${m}.defs
+		${pkgdatadir}/${b}.scm
+		${pkgdatadir}/gw/${m}.scm
+		${pkgdatadir}/gw/${m}-spec.scm
+        ${pkgdatadir}/overrides/${m}.defs*
+		"
+
+	case ${b} in
+		gnome-ui)	PKG_CONTENTS[${n}]+=" usr/lib/pkgconfig/guile-gnome-${m}*" ;;
+	esac
+
+	let n++
+done
+unset b m n
+
+DIFF_EXCLUDES="dev-environ"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	cd ${B}
+	cygconf --disable-static --disable-Werror
+	cygmake -j1 GUILE_FLAGS="-L \$(top_builddir)/glib"
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	sed -e 's/LD_LIBRARY_PATH/PATH/g' -i ${D}/usr/bin/guile-gnome-${abi}
+}

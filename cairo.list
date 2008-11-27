@@ -1,0 +1,3 @@
+usr/lib/guile-gnome-*/*gw-guile-gnome-cairo.*
+usr/share/guile-gnome-*/gnome/cairo*
+usr/share/guile-gnome-*/gnome/gw/cairo*

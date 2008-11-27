@@ -1,0 +1,7 @@
+category: Scheme Gnome
+requires: cygwin g-wrap libguile17 guile-gnome0-gobject guile-gnome0-gtk glib2 gtk2-x11 libgnomeui2
+external-source: guile-gnome0
+sdesc: "Guile GNOME library bindings (GnomeUI bindings)"
+ldesc: "guile-gnome is a Guile wrapper collection for the GNOME library 
+stack. It ships with an wrapper engine that allows semi-automatic 
+wrapping of GObject-based C APIs."

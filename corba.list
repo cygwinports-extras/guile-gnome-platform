@@ -1,0 +1,7 @@
+usr/bin/cygguile-gnome-corba-*.dll
+usr/lib/guile-gnome-*/*gw-guile-gnome-corba.*
+usr/include/guile-gnome-*/guile-gnome-corba/
+usr/lib/libguile-gnome-corba-*.*
+usr/lib/orbit-2.0/
+usr/share/guile-gnome-*/gnome/corba*
+usr/share/guile-gnome-*/gnome/gw/corba*

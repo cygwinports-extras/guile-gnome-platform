@@ -1,0 +1,296 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/atk/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/atk/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/atk/gnome/gw/Makefile.am	2007-05-20 11:39:07.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/atk/gnome/gw/Makefile.am	2007-11-28 00:52:12.842190900 -0600
+@@ -20,7 +20,7 @@
+ 	$(G_WRAP_CFLAGS)
+ libgw_guile_gnome_atk_la_LIBADD = $(ATK_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS)
+-libgw_guile_gnome_atk_la_LDFLAGS = -module
++libgw_guile_gnome_atk_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES += $(wildcard guile-gnome-gw-atk.*) atk.scm
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/atk/gnome/overrides/Makefile.am src/guile-gnome-platform-2.15.95/atk/gnome/overrides/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/atk/gnome/overrides/Makefile.am	2007-05-20 11:39:07.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/atk/gnome/overrides/Makefile.am	2007-11-28 00:52:13.185940900 -0600
+@@ -2,6 +2,6 @@
+ 
+ moduledir = $(guilemoduledir)/overrides
+ 
+-module_DATA = $(wildcard *.defs*)
++module_DATA = atk.defs
+ 
+ EXTRA_DIST = $(module_DATA)
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/cairo/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/cairo/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/cairo/gnome/gw/Makefile.am	2007-05-25 05:00:24.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/cairo/gnome/gw/Makefile.am	2007-11-28 00:52:13.232815900 -0600
+@@ -20,7 +20,7 @@
+ 	$(G_WRAP_CFLAGS)
+ libgw_guile_gnome_cairo_la_LIBADD = $(GUILE_CAIRO_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS)
+-libgw_guile_gnome_cairo_la_LDFLAGS = -module
++libgw_guile_gnome_cairo_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES += $(wildcard guile-gnome-gw-cairo.*) cairo.scm
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/configure.ac src/guile-gnome-platform-2.15.95/configure.ac
+--- origsrc/guile-gnome-platform-2.15.95/configure.ac	2007-11-10 10:19:11.000000000 -0600
++++ src/guile-gnome-platform-2.15.95/configure.ac	2007-11-28 00:52:13.248440900 -0600
+@@ -217,7 +217,7 @@
+ 
+ record_check glib true
+ # gnome-vfs
+-PKG_CHECK_MODULES(GNOME_VFS, gnome-vfs-2.0 >= 2.16.0, HAVE_GNOME_VFS=true, 
++PKG_CHECK_MODULES(GNOME_VFS, gnome-vfs-2.0 >= 2.16.0 bonobo-activation-2.0, HAVE_GNOME_VFS=true, 
+                                                      HAVE_GNOME_VFS=false)
+ AC_SUBST(GNOME_VFS_CFLAGS)
+ AC_SUBST(GNOME_VFS_LIBS)
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/corba/demos/corba/Makefile.am src/guile-gnome-platform-2.15.95/corba/demos/corba/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/corba/demos/corba/Makefile.am	2007-05-20 11:39:16.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/corba/demos/corba/Makefile.am	2007-11-28 00:52:13.248440900 -0600
+@@ -19,7 +19,7 @@
+ 
+ Foo_module_la_LIBADD = $(CORBA_LIBS)
+ 
+-Foo_module_la_LDFLAGS = -export-dynamic -module
++Foo_module_la_LDFLAGS = -export-dynamic -module -avoid-version -no-undefined
+ 
+ BUILT_SOURCES = $(CORBA_SOURCE)
+ CLEANFILES = $(BUILT_SOURCES)
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/corba/gnome/corba/Makefile.am src/guile-gnome-platform-2.15.95/corba/gnome/corba/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/corba/gnome/corba/Makefile.am	2007-05-20 11:39:16.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/corba/gnome/corba/Makefile.am	2007-11-28 00:52:13.404690900 -0600
+@@ -15,8 +15,8 @@
+ libguile_gnome_corba_@API_VERSION@_la_CFLAGS = $(CORBA_CFLAGS)  \
+   $(AM_CFLAGS) $(GUILE_GLIB_CFLAGS) $(GUILE_CFLAGS) -DORBIT2_STUBS_API
+ 
+-libguile_gnome_corba_@API_VERSION@_la_LIBADD = $(GUILE_GLIB_LIBS) $(GUILE_LIBS)
+-libguile_gnome_corba_@API_VERSION@_la_LDFLAGS = -export-dynamic # FIXME: version info
++libguile_gnome_corba_@API_VERSION@_la_LIBADD = $(GUILE_GLIB_LIBS) $(GUILE_LIBS) $(CORBA_LIBS)
++libguile_gnome_corba_@API_VERSION@_la_LDFLAGS = -export-dynamic -no-undefined # FIXME: version info
+ 
+ guile_gnome_includedir = $(includedir)/guile-gnome-@API_VERSION@
+ guile_gnome_subincludedir = $(guile_gnome_includedir)/guile-gnome-corba
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/corba/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/corba/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/corba/gnome/gw/Makefile.am	2007-05-20 11:39:16.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/corba/gnome/gw/Makefile.am	2007-11-28 00:52:13.404690900 -0600
+@@ -20,7 +20,7 @@
+ 	$(G_WRAP_CFLAGS) -I$(top_srcdir)/corba/gnome/corba
+ libgw_guile_gnome_corba_la_LIBADD = $(CORBA_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS) ../corba/libguile-gnome-corba-@API_VERSION@.la
+-libgw_guile_gnome_corba_la_LDFLAGS = -module
++libgw_guile_gnome_corba_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES += $(wildcard guile-gnome-gw-corba.*) corba.scm
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/gconf/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/gconf/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/gconf/gnome/gw/Makefile.am	2007-05-20 11:39:59.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/gconf/gnome/gw/Makefile.am	2007-11-28 00:52:13.404690900 -0600
+@@ -21,7 +21,7 @@
+ libgw_guile_gnome_gconf_la_LIBADD = $(GCONF_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS)
+ 
+-libgw_guile_gnome_gconf_la_LDFLAGS = -module
++libgw_guile_gnome_gconf_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES = $(wildcard gnome-*.log) \
+ 	     $(wildcard guile-gnome-gw-gconf.*) gconf.scm
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/glib/bin/guile-gnome.in src/guile-gnome-platform-2.15.95/glib/bin/guile-gnome.in
+--- origsrc/guile-gnome-platform-2.15.95/glib/bin/guile-gnome.in	2007-05-20 11:40:30.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/glib/bin/guile-gnome.in	2007-11-28 00:52:13.451565900 -0600
+@@ -50,7 +50,9 @@
+   LD_LIBRARY_PATH=@guilegnomelibdir@:$LD_LIBRARY_PATH
+ fi
+ 
+-export GUILE_LOAD_PATH LD_LIBRARY_PATH
++GUILE_WARN_DEPRECATED="no"
++
++export GUILE_LOAD_PATH GUILE_WARN_DEPRECATED LD_LIBRARY_PATH
+ 
+ # Taken from autoconf.info, "Portable Shell"
+ case $# in
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/glib/gnome/gobject/Makefile.am src/guile-gnome-platform-2.15.95/glib/gnome/gobject/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/glib/gnome/gobject/Makefile.am	2007-08-25 08:22:57.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/glib/gnome/gobject/Makefile.am	2007-11-28 00:52:13.467190900 -0600
+@@ -16,7 +16,7 @@
+   -DGUILE_GOBJECT_DIR=\""$(guilegnomedir)"\"
+ 
+ libguile_gnome_gobject_@API_VERSION@_la_LIBADD = $(GOBJECT_LIBS) $(GUILE_LIBS)
+-libguile_gnome_gobject_@API_VERSION@_la_LDFLAGS = # FIXME: version info
++libguile_gnome_gobject_@API_VERSION@_la_LDFLAGS = -no-undefined # FIXME: version info
+ 
+ guile_gnome_includedir = $(includedir)/guile-gnome-@API_VERSION@
+ guile_gnome_include_HEADERS = guile-gnome-gobject.h
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/glib/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/glib/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/glib/gnome/gw/Makefile.am	2007-05-20 11:40:30.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/glib/gnome/gw/Makefile.am	2007-11-28 00:52:13.467190900 -0600
+@@ -34,7 +34,7 @@
+ libgw_guile_gnome_gobject_la_LIBADD = $(G_WRAP_LIBS) $(GOBJECT_LIBS) \
+ 	$(GUILE_LIBS) $(GUILE_GLIB_LIBS) \
+ 	 ../gobject/libguile-gnome-gobject-@API_VERSION@.la
+-libgw_guile_gnome_gobject_la_LDFLAGS = -module
++libgw_guile_gnome_gobject_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ # libgw-guile-gnome-glib (g-wrap support for glib)
+ 
+@@ -47,7 +47,7 @@
+ 	$(GUILE_GLIB_CFLAGS)
+ libgw_guile_gnome_glib_la_LIBADD = $(GLIB_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS)
+-libgw_guile_gnome_glib_la_LDFLAGS = -module
++libgw_guile_gnome_glib_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ BUILT_SOURCES = \
+ 	guile-gnome-gw-gobject.c \
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/glib/test-suite/Makefile.am src/guile-gnome-platform-2.15.95/glib/test-suite/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/glib/test-suite/Makefile.am	2007-11-10 10:01:10.000000000 -0600
++++ src/guile-gnome-platform-2.15.95/glib/test-suite/Makefile.am	2007-11-28 00:52:13.514065900 -0600
+@@ -7,16 +7,16 @@
+ libgw_guile_test_gobject_la_SOURCES = test-gobject.c
+ nodist_libgw_guile_test_gobject_la_SOURCES = gw-test-gobject.c
+ libgw_guile_test_gobject_la_CFLAGS = $(std_cflags)
+-libgw_guile_test_gobject_la_LDFLAGS = -module -rpath $(libdir) 
++libgw_guile_test_gobject_la_LDFLAGS = -module -avoid-version -no-undefined -rpath $(libdir) 
+ libgw_guile_test_gobject_la_LIBADD = \
+-	$(GUILE_GLIB_LIBS) $(G_WRAP_LIBS) $(GUILE_LIBS)
++	$(GUILE_GLIB_LIBS) $(G_WRAP_LIBS) $(GUILE_LIBS) $(GOBJECT_LIBS)
+ 
+ libgw_guile_test_glib_la_SOURCES = test-glib.c
+ nodist_libgw_guile_test_glib_la_SOURCES = gw-test-glib.c
+ libgw_guile_test_glib_la_CFLAGS = $(std_cflags)
+-libgw_guile_test_glib_la_LDFLAGS = -module -rpath $(libdir) 
++libgw_guile_test_glib_la_LDFLAGS = -module -avoid-version -no-undefined -rpath $(libdir) 
+ libgw_guile_test_glib_la_LIBADD = \
+-	$(GUILE_GLIB_LIBS) $(G_WRAP_LIBS) $(GUILE_LIBS)
++	$(GUILE_GLIB_LIBS) $(G_WRAP_LIBS) $(GUILE_LIBS) $(GLIB_LIBS)
+ 
+ noinst_HEADERS = test-gobject.h test-glib.h
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/gnome-vfs/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/gnome-vfs/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/gnome-vfs/gnome/gw/Makefile.am	2007-05-20 11:40:39.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/gnome-vfs/gnome/gw/Makefile.am	2007-11-28 00:52:13.514065900 -0600
+@@ -23,7 +23,7 @@
+ libgw_guile_gnome_gnome_vfs_la_LIBADD = $(GNOME_VFS_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS)
+ 
+-libgw_guile_gnome_gnome_vfs_la_LDFLAGS = -module
++libgw_guile_gnome_gnome_vfs_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES = $(wildcard gnome-*.log) \
+ 	     $(wildcard guile-gnome-gw-gnome-vfs.*) gnome-vfs.scm
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/gtk/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/gtk/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/gtk/gnome/gw/Makefile.am	2007-05-24 03:41:06.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/gtk/gnome/gw/Makefile.am	2007-11-28 00:52:13.529690900 -0600
+@@ -39,7 +39,7 @@
+ libgw_guile_gnome_gdk_la_LIBADD = $(GDK_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS) $(GUILE_CAIRO_LIBS) $(GDK_PIXBUF_LIBS)
+ 
+-libgw_guile_gnome_gdk_la_LDFLAGS = -module
++libgw_guile_gnome_gdk_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES += $(wildcard guile-gnome-gw-gdk.*) gdk.scm
+ 
+@@ -54,9 +54,9 @@
+ 	$(G_WRAP_CFLAGS) $(GTK_DEPRECATED_CFLAGS)
+ 
+ libgw_guile_gnome_gtk_la_LIBADD = $(GTK_LIBS) $(GUILE_LIBS) \
+-	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS) $(GUILE_CAIRO_CFLAGS)
++	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS) $(GUILE_CAIRO_LIBS)
+ 
+-libgw_guile_gnome_gtk_la_LDFLAGS = -module
++libgw_guile_gnome_gtk_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES += $(wildcard guile-gnome-gw-gtk.*) gtk.scm
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/gtk/gnome/overrides/Makefile.am src/guile-gnome-platform-2.15.95/gtk/gnome/overrides/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/gtk/gnome/overrides/Makefile.am	2007-05-20 11:41:02.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/gtk/gnome/overrides/Makefile.am	2007-11-28 00:52:13.545315900 -0600
+@@ -2,6 +2,7 @@
+ 
+ moduledir = $(guilemoduledir)/overrides
+ 
+-module_DATA = $(wildcard *.defs*)
++module_DATA = gdk-pixbuf.defs gdk.defs gdk.defs-type-ignores \
++              gtk.defs gtk-customs.defs gtk.defs-type-ignores
+ 
+ EXTRA_DIST = $(module_DATA)
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/libglade/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/libglade/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/libglade/gnome/gw/Makefile.am	2007-05-20 11:41:13.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/libglade/gnome/gw/Makefile.am	2007-11-28 00:52:13.560940900 -0600
+@@ -21,7 +21,7 @@
+ libgw_guile_gnome_libglade_la_LIBADD = $(LIBGLADE_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS)
+ 
+-libgw_guile_gnome_libglade_la_LDFLAGS = -module
++libgw_guile_gnome_libglade_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES = $(wildcard gnome-*.log) \
+ 	     $(wildcard guile-gnome-gw-libglade.*) libglade.scm
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/libgnome/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/libgnome/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/libgnome/gnome/gw/Makefile.am	2007-05-20 11:41:21.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/libgnome/gnome/gw/Makefile.am	2007-11-28 00:52:13.592190900 -0600
+@@ -21,7 +21,7 @@
+ libgw_guile_gnome_libgnome_la_LIBADD = $(LIBGNOME_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS)
+ 
+-libgw_guile_gnome_libgnome_la_LDFLAGS = -module
++libgw_guile_gnome_libgnome_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES = $(wildcard gnome-*.log) \
+ 	     $(wildcard guile-gnome-gw-libgnome.*) libgnome.scm
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/libgnomecanvas/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/libgnomecanvas/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/libgnomecanvas/gnome/gw/Makefile.am	2007-05-20 11:41:30.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/libgnomecanvas/gnome/gw/Makefile.am	2007-11-28 00:52:13.592190900 -0600
+@@ -24,7 +24,7 @@
+ libgw_guile_gnome_canvas_la_LIBADD = $(CANVAS_LIBS) $(GUILE_GLIB_LIBS) \
+ 	$(GUILE_LIBS) $(G_WRAP_LIBS) 
+ 
+-libgw_guile_gnome_canvas_la_LDFLAGS = -module
++libgw_guile_gnome_canvas_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES += $(wildcard guile-gnome-gw-canvas.*) canvas.scm
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/libgnomeui/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/libgnomeui/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/libgnomeui/gnome/gw/Makefile.am	2007-05-20 11:41:39.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/libgnomeui/gnome/gw/Makefile.am	2007-11-28 00:52:13.592190900 -0600
+@@ -18,7 +18,7 @@
+ libgw_guile_gnome_libgnomeui_la_LIBADD = $(LIBGNOMEUI_LIBS) $(GUILE_LIBS) \
+ 	$(G_WRAP_LIBS) $(GUILE_GLIB_LIBS)
+ 
+-libgw_guile_gnome_libgnomeui_la_LDFLAGS = -module
++libgw_guile_gnome_libgnomeui_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES = $(wildcard gnome-*.log) \
+ 	     $(wildcard guile-gnome-gw-*) libgnomeui.scm
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/pango/gnome/gw/Makefile.am src/guile-gnome-platform-2.15.95/pango/gnome/gw/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/pango/gnome/gw/Makefile.am	2007-11-10 05:30:49.000000000 -0600
++++ src/guile-gnome-platform-2.15.95/pango/gnome/gw/Makefile.am	2007-11-28 00:52:13.623440900 -0600
+@@ -23,7 +23,7 @@
+ libgw_guile_gnome_pango_la_LIBADD = $(PANGO_LIBS) $(GUILE_GLIB_LIBS) \
+ 	$(GUILE_LIBS) $(G_WRAP_LIBS) 
+ 
+-libgw_guile_gnome_pango_la_LDFLAGS = -module
++libgw_guile_gnome_pango_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES += $(wildcard guile-gnome-gw-pango.*) pango.scm
+ 
+@@ -50,7 +50,7 @@
+ libgw_guile_gnome_pangocairo_la_LIBADD = $(PANGO_LIBS) $(GUILE_GLIB_LIBS) \
+ 	$(GUILE_LIBS) $(G_WRAP_LIBS)  $(GUILE_CAIRO_LIBS) $(PANGOCAIRO_LIBS)
+ 
+-libgw_guile_gnome_pangocairo_la_LDFLAGS = -module
++libgw_guile_gnome_pangocairo_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ CLEANFILES += $(wildcard guile-gnome-gw-pangocairo.*) pangocairo.scm
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x dev-environ origsrc/guile-gnome-platform-2.15.95/pango/gnome/overrides/Makefile.am src/guile-gnome-platform-2.15.95/pango/gnome/overrides/Makefile.am
+--- origsrc/guile-gnome-platform-2.15.95/pango/gnome/overrides/Makefile.am	2007-05-20 11:41:49.000000000 -0500
++++ src/guile-gnome-platform-2.15.95/pango/gnome/overrides/Makefile.am	2007-11-28 00:52:13.623440900 -0600
+@@ -2,6 +2,6 @@
+ 
+ moduledir = $(guilemoduledir)/overrides
+ 
+-module_DATA = $(wildcard *.defs*)
++module_DATA = pango.defs pangocairo.defs
+ 
+ EXTRA_DIST = $(module_DATA)
