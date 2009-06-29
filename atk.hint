@@ -1,5 +1,5 @@
 category: Scheme Gnome
-requires: cygwin g-wrap libguile17 guile-gnome0-gobject glib2 atk
+requires: g-wrap libguile17 guile-gnome0-gobject glib2 atk
 external-source: guile-gnome0
 sdesc: "Guile GNOME library bindings (ATK bindings)"
 ldesc: "guile-gnome is a Guile wrapper collection for the GNOME library 

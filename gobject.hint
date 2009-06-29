@@ -1,5 +1,5 @@
 category: Scheme Gnome
-requires: cygwin g-wrap libguile17 glib2
+requires: g-wrap libguile17 glib2
 external-source: guile-gnome0
 sdesc: "Guile GNOME library bindings (GLib/GObject bindings)"
 ldesc: "guile-gnome is a Guile wrapper collection for the GNOME library 

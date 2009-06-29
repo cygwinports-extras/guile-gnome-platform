@@ -1,5 +1,5 @@
 category: Scheme Gnome
-requires: cygwin g-wrap libguile17 guile-cairo
+requires: g-wrap libguile17 guile-cairo
 external-source: guile-gnome0
 sdesc: "Guile GNOME library bindings (cairo bindings)"
 ldesc: "guile-gnome is a Guile wrapper collection for the GNOME library 
